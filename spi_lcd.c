@@ -78,7 +78,9 @@ static void  lcd_writeIndex(uint8_t dat)         //写命令
 
     }
     else {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("Unsuccessful master SPI transfer\n");
+#endif
     }
 }
 
@@ -99,7 +101,9 @@ static void lcd_writeData(uint8_t dat)           //写数据
 
     }
     else {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("Unsuccessful master SPI transfer\n");
+#endif
     }
 }
 
@@ -124,7 +128,9 @@ static void lcd_writedata_16bit(uint16_t dat)    //向液晶屏写一个16位数
 
     }
     else {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("Unsuccessful master SPI transfer\n");
+#endif
     }
 }
 //-------------------------------------------------------------------------------------------------------------------
@@ -140,20 +146,28 @@ static void lcd_writedata_16bit(uint16_t dat)    //向液晶屏写一个16位数
 void lcd_set_region(unsigned int x_start,unsigned int y_start,unsigned int x_end,unsigned int y_end)
 {
     if(TFT_X_MAX<x_start){
+#ifdef NORMAL_DEBUG
         DEBUG("lcd_set_region x_start %d > TFT_X_MAX %d", x_start, TFT_X_MAX);
+#endif
         while(1);
     }
     if(TFT_Y_MAX<y_start){
+#ifdef NORMAL_DEBUG
         DEBUG("lcd_set_region y_start %d > TFT_Y_MAX %d", y_start, TFT_Y_MAX);
+#endif
         while(1);
     };
 
     if(TFT_X_MAX<x_end){
+#ifdef NORMAL_DEBUG
         DEBUG("lcd_set_region x_end %d > TFT_X_MAX %d", x_end, TFT_X_MAX);
+#endif
         while(1);
     };
     if(TFT_Y_MAX<y_end){
+#ifdef NORMAL_DEBUG
         DEBUG("lcd_set_region y_end %d > TFT_Y_MAX %d", y_end, TFT_Y_MAX);
+#endif
         while(1);
     };
 
@@ -859,32 +873,41 @@ void lcd_display_chinese(uint16_t x, uint16_t y, uint8_t size, const uint8_t *p,
 }
 /*=======================LCD  函数定义 结束  ========================*/
 
+//@note count time with the timer callback function
+
+//uint32_t time_counter;
+
 void timerCallback(Timer_Handle myHandle)
 {
     Encoder_EC11_Analyze(Encoder_EC11_Scan());//EC11检测更新
+  //  timer_counter++;
 }
 
 void lcd_init_Thread(void)
 {
-
     SPI_Params masterSpiParams;
-
     /* Initialize SPI handle as default master */
     SPI_Params_init(&masterSpiParams);
     masterSpiParams.frameFormat = SPI_POL0_PHA0;
     masterSpiParams.bitRate = 10000000;
     masterSpi = SPI_open(CONFIG_SPI_0, &masterSpiParams);  //硬件SPI初始化
     if (masterSpi == NULL) {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("Error initializing master SPI\n");
+#endif
         while (1);
     }
     else {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("Master SPI initialized\n");
+#endif
     }
 
     lcd_init();
     lcd_showstr(0, 1, "Initializing...");
+#ifdef NORMAL_DEBUG
     DEBUG_printf("Done\n");
+#endif
 
     EC11_GPIO_Init();
     Encoder_EC11_Init(0);
@@ -898,7 +921,8 @@ void lcd_init_Thread(void)
     Timer_init();
 
     /* Setting up the timer in continuous callback mode that calls the callback
-     * function every 1,000,000 microseconds, or 1 second.
+     * each 1 in the period represents 1us
+     * get into the callback function every 2ms
      */
     Timer_Params_init(&params);
     params.period = 2000;

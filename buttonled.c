@@ -180,12 +180,12 @@ void *buttonled_Thread(void *arg0)
 
     /* Create ring buffer to store button events */
     RingBuf_construct(&ringObj, eventBuf, EVENTBUFSIZE);
-
+#ifdef NORMAL_DEBUG
     DEBUG_printf("Button/LED Demo:\n"
                    "Each button controls an LED. Click to toggle, "
                    "double click to fast blink three times, "
                    "hold the button to slow blink.\n");
-
+#endif
     /* Open button 1 and button 2 */
     Button_Params_init(&buttonParams);
     buttonHandle[CONFIG_BUTTON_0] = Button_open(CONFIG_BUTTON_0,
@@ -199,7 +199,9 @@ void *buttonled_Thread(void *arg0)
     if((buttonHandle[CONFIG_BUTTON_1]  == NULL) ||
         (buttonHandle[CONFIG_BUTTON_0]  == NULL))
     {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("Button Open Failed!");
+#endif
     }
 
     /* Open LED0 and LED1 with default params */
@@ -208,7 +210,9 @@ void *buttonled_Thread(void *arg0)
     ledHandle[CONFIG_LED_1] = LED_open(CONFIG_LED_1, &ledParams);
     if((ledHandle[CONFIG_LED_0] == NULL) || (ledHandle[CONFIG_LED_1] == NULL))
     {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("LED Open Failed!");
+#endif
     }
 
 #if CONFIG_LEDCOUNT > 2
@@ -217,7 +221,9 @@ void *buttonled_Thread(void *arg0)
     ledHandle[CONFIG_LED_2] = LED_open(CONFIG_LED_2, &ledParams);
     if(ledHandle[CONFIG_LED_2] == NULL)
     {
+#ifdef NORMAL_DEBUG
         DEBUG_printf("PWM LED Open Failed!");
+#endif
     }
 #endif
 

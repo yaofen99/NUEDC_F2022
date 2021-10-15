@@ -104,6 +104,69 @@ main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/dr
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/apps/Button.h
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/GPIO.h
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/dpl/ClockP.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/package.defs.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__prologue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__prologue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__epilogue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__epilogue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__prologue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Text.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__epilogue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/package/package.defs.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Queue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Swi.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Queue.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
+main_tirtos.obj: /home/hq/workspace_v10/project/header/pid.h
+main_tirtos.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
 
 ../main_tirtos.c:
 
@@ -312,4 +375,130 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/GPIO.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/dpl/ClockP.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/package.defs.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__prologue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__prologue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags__epilogue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert__epilogue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__prologue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Main.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Text.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log__epilogue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/package/package.defs.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Queue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Swi.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Diags.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Log.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Queue.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h:
+
+/home/hq/workspace_v10/project/header/pid.h:
+
+/home/hq/workspace_v10/project/header/struct_typedef.h:
 

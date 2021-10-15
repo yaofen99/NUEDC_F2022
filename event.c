@@ -14,6 +14,7 @@ RingBuf_Object   ringObj;
 void doEventLogs(void)
 {
     uint8_t event;
+#ifdef NORMAL_DEBUG
     while(RingBuf_get(&ringObj, &event) >= 0)
     {
         if(event & Button_EV_CLICKED)
@@ -29,4 +30,5 @@ void doEventLogs(void)
             DEBUG_printf("Button:Long Pressed");
         }
     }
+#endif
 }

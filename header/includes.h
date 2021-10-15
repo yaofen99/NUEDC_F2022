@@ -30,6 +30,10 @@
 
 #include <ti/drivers/apps/Button.h>
 
+#include "ti/sysbios/knl/Clock.h"
+
+#include "param.h"
+#include "pid.h"
 
 #define FALSE 0U
 #define TRUE 1U
@@ -62,6 +66,10 @@ extern IMU3 imu3;
 extern IMU_ANGLE imu;
 extern int lua ;
 extern uint8_t gPixel[128];
+extern int lua ;
+
+extern pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
+extern pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
 
 void Console_Print( const char *buffer);
 

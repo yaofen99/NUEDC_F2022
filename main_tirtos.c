@@ -64,6 +64,12 @@ extern void *speed_control_Thread(void *arg0);
 /* Stack size in bytes */
 #define THREADSTACKSIZE    1024
 
+Void clk0Fxn(UArg arg0);
+Void clk1Fxn(UArg arg0);
+
+Clock_Struct clk0Struct, clk1Struct;
+Clock_Handle clk2Handle;
+
 /*
  *  ======== main ========
  */
@@ -231,9 +237,59 @@ int main(void)
         while (1) {}
     }
 
-    DEBUG_printf("Button Open Failed!");
+    /* Construct BIOS Objects */
+    /*   sys clock configure                */
+        Clock_Params clkParams;
+
+        Clock_Params_init(&clkParams);
+        clkParams.period = 5000/Clock_tickPeriod;
+        clkParams.startFlag = TRUE;
+
+        /* Construct a periodic Clock Instance */
+        Clock_construct(&clk0Struct, (Clock_FuncPtr)clk0Fxn,
+                        5000/Clock_tickPeriod, &clkParams);
+
+        clkParams.period = 0;
+        clkParams.startFlag = FALSE;
+
+        /* Construct a one-shot Clock Instance */
+//        Clock_construct(&clk1Struct, (Clock_FuncPtr)clk1Fxn,
+//                        11000/Clock_tickPeriod, &clkParams);
+
+        clk2Handle = Clock_handle(&clk1Struct);
+
+        Clock_start(clk2Handle);
+
+
+
+    Clock_getTicks();
 
     BIOS_start();
 
     return (0);
+}
+
+
+/*
+ *  ======== clk0Fxn =======
+ */
+Void clk0Fxn(UArg arg0)
+{
+    UInt32 time;
+
+    time = Clock_getTicks();
+    DEBUG_printf("System time in clk0Fxn = %lu\n", (ULong)time);
+}
+
+/*
+ *  ======== clk1Fxn =======
+ */
+Void clk1Fxn(UArg arg0)
+{
+    UInt32 time;
+
+    time = Clock_getTicks();
+    DEBUG_printf("System time in clk1Fxn = %lu\n", (ULong)time);
+    DEBUG_printf("Calling BIOS_exit() from clk1Fxn\n");
+    BIOS_exit(0);
 }

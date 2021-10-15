@@ -20,6 +20,7 @@ ORDERED_OBJS += \
 "./main_tirtos.obj" \
 "./motor.obj" \
 "./motor_drive.obj" \
+"./pid.obj" \
 "./syscfg/ti_drivers_config.obj" \
 "./spi_lcd.obj" \
 "./uart.obj" \
@@ -180,8 +181,8 @@ project.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "adcTSL1401.obj" "beep.obj" "buttonled.obj" "console.obj" "ec11.obj" "encoder.obj" "event.obj" "i2cbh1750.obj" "lcd_font.obj" "main_tirtos.obj" "motor.obj" "motor_drive.obj" "syscfg/ti_drivers_config.obj" "spi_lcd.obj" "uart.obj" "ui.obj" "upper_layer_control/speed_control.obj" 
-	-$(RM) "adcTSL1401.d" "beep.d" "buttonled.d" "console.d" "ec11.d" "encoder.d" "event.d" "i2cbh1750.d" "lcd_font.d" "main_tirtos.d" "motor.d" "motor_drive.d" "syscfg/ti_drivers_config.d" "spi_lcd.d" "uart.d" "ui.d" "upper_layer_control/speed_control.d" 
+	-$(RM) "adcTSL1401.obj" "beep.obj" "buttonled.obj" "console.obj" "ec11.obj" "encoder.obj" "event.obj" "i2cbh1750.obj" "lcd_font.obj" "main_tirtos.obj" "motor.obj" "motor_drive.obj" "pid.obj" "syscfg/ti_drivers_config.obj" "spi_lcd.obj" "uart.obj" "ui.obj" "upper_layer_control/speed_control.obj" 
+	-$(RM) "adcTSL1401.d" "beep.d" "buttonled.d" "console.d" "ec11.d" "encoder.d" "event.d" "i2cbh1750.d" "lcd_font.d" "main_tirtos.d" "motor.d" "motor_drive.d" "pid.d" "syscfg/ti_drivers_config.d" "spi_lcd.d" "uart.d" "ui.d" "upper_layer_control/speed_control.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
 	-@echo ' '

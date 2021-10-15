@@ -206,8 +206,9 @@ void *consoleThread(void *arg0)
 
     UART_init();
     Display_uart_init();
-
+#ifdef NORMAL_DEBUG
     DEBUG_printf("Project Initialized! ! \n");
+#endif
 
 //   使用console时用
 //    /*

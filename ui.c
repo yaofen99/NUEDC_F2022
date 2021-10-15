@@ -521,7 +521,9 @@ void HandleAdjustParamView(uint8_t action_type, uint8_t pos)
                                           *(Items[pos].var_ptr.f) = Items[pos].var_min.f;
                                         if(*(Items[pos].var_ptr.f) < Items[pos].var_min.f || *(Items[pos].var_ptr.f) > Items[pos].var_max.f)
                                           *(Items[pos].var_ptr.f) = Items[pos].var_min.f;
+#ifdef NORMAL_DEBUG
                                            DEBUG_printf("%f,%f\n\r", *(Items[pos].var_ptr.f), Items[pos].step.f);
+#endif
                 }
             }
             else
@@ -761,7 +763,9 @@ void ui_init(void)
 
 static void printvalue(void)
 {
-//    DEBUG_printf("CurView=%d ItemNums=%d CurItem=%d ItemFirstLine=%d\r\n",CurView,ItemNums,CurItem,ItemFirstLine);
+#ifdef NORMAL_DEBUG
+    DEBUG_printf("CurView=%d ItemNums=%d CurItem=%d ItemFirstLine=%d\r\n",CurView,ItemNums,CurItem,ItemFirstLine);
+#endif
 
 }
 

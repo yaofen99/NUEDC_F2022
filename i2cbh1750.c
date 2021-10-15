@@ -82,12 +82,16 @@ void *BH1750_Thread(void *arg0)
     i2c = I2C_open(CONFIG_I2C_0, &i2cParams);
 
     if (i2c == NULL) {
+#ifdef NORMAL_DEBUG
         DEBUG_printf( "Error Initializing I2C!\n ");
+#endif
         while (1) {}
     }
-
+#ifdef NORMAL_DEBUG
     DEBUG_printf("Master: the BH1750 device\n");
     DEBUG_printf((char *)"I2C Slave Address: 0x%x", BH1750_ADDRESS);
+#endif
+
     int i;
     for (i = 0; i < 5; i++)
     {
@@ -131,15 +135,15 @@ void *BH1750_Thread(void *arg0)
 
 
         lua = (mirrorRegister[0]*256+ mirrorRegister[1]) * 10 / 6; // 测量值 * 2 /1.2
-
-  //temp      DEBUG_printf( "BH1750_lua:%d\n", lua);
-
         sleep(1);
     }
-
     /* Deinitialized I2C */
     I2C_close(i2c);
+#ifdef NORMAL_DEBUG
     DEBUG_printf("I2C closed!\n");
+#endif
 
     return (0);
 }
+
+

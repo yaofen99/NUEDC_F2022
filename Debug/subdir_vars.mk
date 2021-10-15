@@ -22,6 +22,7 @@ C_SRCS += \
 ../main_tirtos.c \
 ../motor.c \
 ../motor_drive.c \
+../pid.c \
 ./syscfg/ti_drivers_config.c \
 ../spi_lcd.c \
 ../uart.c \
@@ -46,6 +47,7 @@ C_DEPS += \
 ./main_tirtos.d \
 ./motor.d \
 ./motor_drive.d \
+./pid.d \
 ./syscfg/ti_drivers_config.d \
 ./spi_lcd.d \
 ./uart.d \
@@ -64,6 +66,7 @@ OBJS += \
 ./main_tirtos.obj \
 ./motor.obj \
 ./motor_drive.obj \
+./pid.obj \
 ./syscfg/ti_drivers_config.obj \
 ./spi_lcd.obj \
 ./uart.obj \
@@ -89,6 +92,7 @@ OBJS__QUOTED += \
 "main_tirtos.obj" \
 "motor.obj" \
 "motor_drive.obj" \
+"pid.obj" \
 "syscfg/ti_drivers_config.obj" \
 "spi_lcd.obj" \
 "uart.obj" \
@@ -111,6 +115,7 @@ C_DEPS__QUOTED += \
 "main_tirtos.d" \
 "motor.d" \
 "motor_drive.d" \
+"pid.d" \
 "syscfg/ti_drivers_config.d" \
 "spi_lcd.d" \
 "uart.d" \
@@ -132,6 +137,7 @@ C_SRCS__QUOTED += \
 "../main_tirtos.c" \
 "../motor.c" \
 "../motor_drive.c" \
+"../pid.c" \
 "./syscfg/ti_drivers_config.c" \
 "../spi_lcd.c" \
 "../uart.c" \

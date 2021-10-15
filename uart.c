@@ -3,6 +3,7 @@
  *
  *  Created on: 2021年7月29日
  *      Author: sundm
+ *  Thread for debug and slot drawing
  */
 
 
@@ -171,13 +172,23 @@ void imu_data_analyse(uint8_t* receive_buf)
     }
     static int count = 0;
     count++;
-    if(0 == count%50)
+    //if(0 == count%50)
     {
+#ifdef NORMAL_DEBUG
         DEBUG_printf( "acc:%f,%f,%f\n",imu3.acc[0],imu3.acc[1],imu3.acc[2]);
-//        DEBUG_printf("gyro:%f,%f,%f\n", imu3.gyro[0],imu3.gyro[1],imu3.gyro[2]);
-//        DEBUG_printf( "agl:%f,%f,%f\n", imu3.agl[0],imu3.agl[1],imu3.agl[2]);
-//        DEBUG_printf( "temp:%f\n", imu.temp);
-
+        DEBUG_printf("gyro:%f,%f,%f\n", imu3.gyro[0],imu3.gyro[1],imu3.gyro[2]);
+        DEBUG_printf( "agl:%f,%f,%f\n", imu3.agl[0],imu3.agl[1],imu3.agl[2]);
+        DEBUG_printf( "temp:%f\n", imu.temp);
+#endif
+#ifdef VOFA_DEBUG
+        /*
+         * costomize debug
+         * */
+        DEBUG_printf( "%f,%f,%f,%f,%f,%f,%f,%f,%f\n",
+                      imu3.acc[0],imu3.acc[1],imu3.acc[2],
+                      imu3.gyro[0],imu3.gyro[1],imu3.gyro[2],
+                      imu3.agl[0],imu3.agl[1],imu3.agl[2],imu.temp);
+#endif
     }
 }
 
