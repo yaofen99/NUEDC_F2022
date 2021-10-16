@@ -3,7 +3,6 @@
 pid.obj: ../pid.c
 pid.obj: /home/hq/workspace_v10/project/header/pid.h
 pid.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
-pid.obj: /home/hq/workspace_v10/project/header/includes.h
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdint.h
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/_ti_config.h
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/linkage.h
@@ -14,6 +13,7 @@ pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_t
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_types.h
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_stdint.h
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h
+pid.obj: /home/hq/workspace_v10/project/header/includes.h
 pid.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h
 pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/ccs/unistd.h
 pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/ccs/sys/types.h
@@ -152,14 +152,13 @@ pid.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
 pid.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
 pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h
 pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
+pid.obj: /home/hq/workspace_v10/project/header/receiver.h
 
 ../pid.c:
 
 /home/hq/workspace_v10/project/header/pid.h:
 
 /home/hq/workspace_v10/project/header/struct_typedef.h:
-
-/home/hq/workspace_v10/project/header/includes.h:
 
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdint.h:
 
@@ -180,6 +179,8 @@ pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packag
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_stdint.h:
 
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h:
+
+/home/hq/workspace_v10/project/header/includes.h:
 
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h:
 
@@ -456,4 +457,6 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h:
+
+/home/hq/workspace_v10/project/header/receiver.h:
 

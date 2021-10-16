@@ -152,6 +152,7 @@ console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/pa
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
 console.obj: /home/hq/workspace_v10/project/header/pid.h
 console.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
+console.obj: /home/hq/workspace_v10/project/header/receiver.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/ccs/semaphore.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/UART.h
 
@@ -458,6 +459,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/pid.h:
 
 /home/hq/workspace_v10/project/header/struct_typedef.h:
+
+/home/hq/workspace_v10/project/header/receiver.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/ccs/semaphore.h:
 

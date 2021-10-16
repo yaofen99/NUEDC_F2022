@@ -237,37 +237,33 @@ int main(void)
         while (1) {}
     }
 
-    /* Construct BIOS Objects */
-    /*   sys clock configure                */
-        Clock_Params clkParams;
+//    Clock_Params clkParams;
+//
+//    Clock_Params_init(&clkParams);
+    //clkParams.period = 5000/Clock_tickPeriod;
+    //clkParams.startFlag = FALSE;
 
-        Clock_Params_init(&clkParams);
-        clkParams.period = 5000/Clock_tickPeriod;
-        clkParams.startFlag = TRUE;
+    /* Construct a periodic Clock Instance */
+    //Clock_construct(&clk0Struct, (Clock_FuncPtr)clk0Fxn,
+    //                5000/Clock_tickPeriod, &clkParams);
 
-        /* Construct a periodic Clock Instance */
-        Clock_construct(&clk0Struct, (Clock_FuncPtr)clk0Fxn,
-                        5000/Clock_tickPeriod, &clkParams);
+    //clkParams.period = 0;
+    //clkParams.startFlag = FALSE;
 
-        clkParams.period = 0;
-        clkParams.startFlag = FALSE;
-
-        /* Construct a one-shot Clock Instance */
-//        Clock_construct(&clk1Struct, (Clock_FuncPtr)clk1Fxn,
-//                        11000/Clock_tickPeriod, &clkParams);
-
-        clk2Handle = Clock_handle(&clk1Struct);
-
-        Clock_start(clk2Handle);
-
-
-
-    Clock_getTicks();
+    /* Construct a one-shot Clock Instance */
+//    Clock_construct(&clk1Struct, (Clock_FuncPtr)clk1Fxn,
+//                    11000/Clock_tickPeriod, &clkParams);
+//
+//    clk2Handle = Clock_handle(&clk1Struct);
+//
+//    Clock_start(clk2Handle);
 
     BIOS_start();
 
     return (0);
 }
+
+
 
 
 /*
@@ -291,5 +287,5 @@ Void clk1Fxn(UArg arg0)
     time = Clock_getTicks();
     DEBUG_printf("System time in clk1Fxn = %lu\n", (ULong)time);
     DEBUG_printf("Calling BIOS_exit() from clk1Fxn\n");
-    BIOS_exit(0);
+    //BIOS_exit(0);
 }

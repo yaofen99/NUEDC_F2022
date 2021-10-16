@@ -35,6 +35,8 @@
 #include "param.h"
 #include "pid.h"
 
+#include "receiver.h"
+
 #define FALSE 0U
 #define TRUE 1U
 

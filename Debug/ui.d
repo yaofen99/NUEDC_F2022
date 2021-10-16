@@ -158,6 +158,7 @@ ui.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/package
 ui.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
 ui.obj: /home/hq/workspace_v10/project/header/pid.h
 ui.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
+ui.obj: /home/hq/workspace_v10/project/header/receiver.h
 
 ../ui.c:
 
@@ -474,4 +475,6 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/pid.h:
 
 /home/hq/workspace_v10/project/header/struct_typedef.h:
+
+/home/hq/workspace_v10/project/header/receiver.h:
 

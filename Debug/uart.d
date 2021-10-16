@@ -152,6 +152,7 @@ uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packa
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
 uart.obj: /home/hq/workspace_v10/project/header/pid.h
 uart.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
+uart.obj: /home/hq/workspace_v10/project/header/receiver.h
 uart.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h
 uart.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h
@@ -529,6 +530,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/pid.h:
 
 /home/hq/workspace_v10/project/header/struct_typedef.h:
+
+/home/hq/workspace_v10/project/header/receiver.h:
 
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h:
 
