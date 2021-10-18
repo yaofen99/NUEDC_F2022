@@ -260,7 +260,7 @@ int main(void)
     Error_init(&eb);
     Clock_Params_init(&clockParams);
     clockParams.period =  500;
-    // 周期性打开中断回调函数有概率爆bug
+    // 周期性打开中断回调函数有概率爆金币
     clockParams.startFlag = FALSE;
     // 只使用了定时功能，把下面的 NULL 替换成需要的函数handle就可
     myClock = Clock_create(NULL,  0, &clockParams, &eb);
