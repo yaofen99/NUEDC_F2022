@@ -168,6 +168,26 @@ main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirto
 main_tirtos.obj: /home/hq/workspace_v10/project/header/pid.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/receiver.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/System.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h
+main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
 
 ../main_tirtos.c:
 
@@ -504,4 +524,44 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/struct_typedef.h:
 
 /home/hq/workspace_v10/project/header/receiver.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/System.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
 

@@ -59,8 +59,10 @@ extern void *lcd_Thread(void *arg0);
 
 extern void *encoder_Thread(void *arg0);
 extern void *beep_pwm_Thread(void *arg0);
-//@ cbl add
+//@user add
 extern void *speed_control_Thread(void *arg0);
+extern void *speed_measure_Thread(void *arg0);
+
 /* Stack size in bytes */
 #define THREADSTACKSIZE    1024
 
@@ -220,6 +222,20 @@ int main(void)
         while (1) {}
     }
 
+    /*beep_Thread config */
+    priParam.sched_priority = 10;
+    retc = pthread_attr_setschedparam(&attrs, &priParam);
+    if (retc != 0) {
+        /* failed to set priority */
+        while (1) {}
+    }
+
+    retc = pthread_create(&thread, &attrs, speed_measure_Thread, NULL);
+    if (retc != 0) {
+        /* pthread_create() failed */
+        while (1) {}
+    }
+
     /*lcd_Thread config */
     pthread_attr_init(&attrs);
 
@@ -237,26 +253,17 @@ int main(void)
         while (1) {}
     }
 
-//    Clock_Params clkParams;
-//
-//    Clock_Params_init(&clkParams);
-//    clkParams.period = 5000/Clock_tickPeriod;
-//    clkParams.startFlag = FALSE;
-//
-//    /* Construct a periodic Clock Instance */
-//    Clock_construct(&clk0Struct, (Clock_FuncPtr)clk0Fxn,
-//                    5000/Clock_tickPeriod, &clkParams);
-//
-//    clkParams.period = 0;
-//    clkParams.startFlag = FALSE;
-//
-//    /* Construct a one-shot Clock Instance */
-//    Clock_construct(&clk1Struct, (Clock_FuncPtr)clk1Fxn,
-//                    11000/Clock_tickPeriod, &clkParams);
-//
-//    clk2Handle = Clock_handle(&clk1Struct);
-//
-//    Clock_start(clk2Handle);
+    Clock_Params clockParams;
+
+    Clock_Handle myClock;
+    Error_Block eb;
+    Error_init(&eb);
+    Clock_Params_init(&clockParams);
+    clockParams.period =  500;
+    // 周期性打开中断回调函数有概率爆bug
+    clockParams.startFlag = FALSE;
+    // 只使用了定时功能，把下面的 NULL 替换成需要的函数handle就可
+    myClock = Clock_create(NULL,  0, &clockParams, &eb);
 
     BIOS_start();
 
@@ -272,7 +279,6 @@ int main(void)
 Void clk0Fxn(UArg arg0)
 {
     UInt32 time;
-
     time = Clock_getTicks();
     DEBUG_printf("System time in clk0Fxn = %lu\n", (ULong)time);
 }

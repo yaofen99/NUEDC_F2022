@@ -34,9 +34,7 @@ param_ty param = {
     .bend_steer_kp = 9.0,
     .bend_steer_ki = 0.0,
     .bend_steer_kd = 42.0,
-    .motor_kp = 24.0,
-    .motor_ki = 0.0,
-    .motor_kd = 0.0,
+
     .circle_pid_ratio = 1.0,
     .velocity = 30,
     .circle_size = {170, 260, 170, 260},
@@ -46,7 +44,29 @@ param_ty param = {
     .circle_exit_angle = {-35,35,-35,35},
     .circle_num = 0,
     .circle_en = 1,
+
+    .motor_kp = 24.0,
+    .motor_ki = 0.0,
+    .motor_kd = 0.0,
+
+    .single_motor_pid[0][0]=1,
+    .single_motor_pid[0][1]=0,
+    .single_motor_pid[0][2]=0,
+
+    .single_motor_pid[1][0]=1,
+    .single_motor_pid[1][1]=0,
+    .single_motor_pid[1][2]=0,
+
+    .single_motor_pid[2][0]=1,
+    .single_motor_pid[2][1]=0,
+    .single_motor_pid[2][2]=0,
+
+    .single_motor_pid[3][0]=1,
+    .single_motor_pid[3][1]=0,
+    .single_motor_pid[3][2]=0,
 };
+
+//@note
 
 uint8_t CurView = 0;//当前菜单界面
 int8_t CurItem = 1;//当前菜单子项
@@ -124,10 +144,10 @@ void DrawEncoderView()
     }
     uint8_t str1[21];
     int encoder1_speed ,encoder2_speed, encoder3_speed, encoder4_speed;
-    encoder1_speed = get_encoder1();
-    encoder2_speed = get_encoder2();
-    encoder3_speed = get_encoder3();
-    encoder4_speed = get_encoder4();
+    encoder1_speed = (int)speed_wheel[0];
+    encoder2_speed = (int)speed_wheel[1];
+    encoder3_speed = (int)speed_wheel[2];
+    encoder4_speed = (int)speed_wheel[3];
     lcd_showint32(2,3,encoder1_speed,5);
     lcd_showint32(66,3,encoder2_speed,5);
     lcd_showint32(2,5,encoder3_speed,5);
@@ -603,7 +623,7 @@ void UpdateMenuItems(uint8_t view_id)//根据view_id来更新菜单项
                 {24, 0, 1, ">>Welcome<<", NULL, 0},
                 {30, 1, 1, "1.sensor", NULL, 0},
                 {30, 2, 2, "2.TSL1401", NULL, 0},
-                {30, 3, 3, "3.encoder", NULL, 0},
+                {30, 3, 3, "3.speed", NULL, 0},
                 {30, 4, 4, "4.boot", NULL, 0},
                 {30, 5, 5, "5.feature", NULL, 0},
                 {30, 6, 6, "6.flag", NULL, 0},

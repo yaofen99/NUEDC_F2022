@@ -17,6 +17,7 @@
 
 #include "includes.h"
 
+//imprtant param about speed
 pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
 pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
 pid_type_def chassis_speed_pid;
@@ -26,22 +27,26 @@ fp32 speed_set_motor;
 
 fp32 speed_wheel[4];
 
+void chassis_init(void);
+
+
 void *speed_control_Thread(void *arg0)
 {
     chassis_init();
     while(1){
+        int i=0;
+        //DEBUG_printf("System time in speed module = %lu\n", (ULong)time);
+
+        //calculate pid
+        //计算pid
+        for (i = 0; i < 4; i++)
+        {
+            PID_calc(&motor_speed_pid[i], speed_wheel[i], motor_speed_pid[i].speed_set);
+        }
+
+        usleep(200000);
 
     }
-
-}
-
-void get_speed (void)
-{
-    static fp32 past_encoder[4];
-    int encoder1_speed ,encoder2_speed, encoder3_speed, encoder4_speed;
-    encoder1_speed = get_encoder1();
-
-
 
 }
 
@@ -54,6 +59,22 @@ void chassis_init(void)
     chassis_speed_pid.Kp = &param.motor_kp;
     chassis_speed_pid.Ki = &param.motor_ki;
     chassis_speed_pid.Kd = &param.motor_kd;
+
+    motor_speed_pid[0].Kp = &param.single_motor_pid[0][0];
+    motor_speed_pid[0].Ki = &param.single_motor_pid[0][1];
+    motor_speed_pid[0].Kd = &param.single_motor_pid[0][2];
+
+    motor_speed_pid[1].Kp = &param.single_motor_pid[1][0];
+    motor_speed_pid[1].Ki = &param.single_motor_pid[1][1];
+    motor_speed_pid[1].Kd = &param.single_motor_pid[1][2];
+
+    motor_speed_pid[2].Kp = &param.single_motor_pid[2][0];
+    motor_speed_pid[2].Ki = &param.single_motor_pid[2][1];
+    motor_speed_pid[2].Kd = &param.single_motor_pid[2][2];
+
+    motor_speed_pid[3].Kp = &param.single_motor_pid[3][0];
+    motor_speed_pid[3].Ki = &param.single_motor_pid[3][1];
+    motor_speed_pid[3].Kd = &param.single_motor_pid[3][2];
 
 
     //chassis motor speed PID
@@ -68,18 +89,21 @@ void chassis_init(void)
     const static fp32 chassis_y_order_filter[1] = {CHASSIS_ACCEL_Y_NUM};
     uint8_t i;
 
+    //we do not use the initializing function as we initialize it in file param.h
     //get chassis motor data point,  initialize motor speed PID
     //获取底盘电机数据指针，初始化PID
-    for (i = 0; i < 4; i++)
-    {
-        //PID_init(&motor_speed_pid[i], PID_POSITION, &motor_speed_pid, M3505_MOTOR_SPEED_PID_MAX_OUT, M3505_MOTOR_SPEED_PID_MAX_IOUT);
-        PID_init(&motor_speed_pid[i], PID_POSITION, motor_speed_pid, M3505_MOTOR_SPEED_PID_MAX_OUT, M3505_MOTOR_SPEED_PID_MAX_IOUT);
-
-    }
+//    for (i = 0; i < 4; i++)
+//    {
+//        //PID_init(&motor_speed_pid[i], PID_POSITION, &motor_speed_pid, M3505_MOTOR_SPEED_PID_MAX_OUT, M3505_MOTOR_SPEED_PID_MAX_IOUT);
+//        PID_init(&motor_speed_pid[i], PID_POSITION, motor_speed_pid, M3505_MOTOR_SPEED_PID_MAX_OUT, M3505_MOTOR_SPEED_PID_MAX_IOUT);
+//
+//    }
     //initialize angle PID
     //初始化角度PID
     PID_init(&chassis_angle_pid, PID_POSITION, chassis_yaw_pid, ANGLE_PID_MAX_OUT, ANGLEL_PID_MAX_IOUT);
 
+    DEBUG_printf("%f,%f,%f",*chassis_speed_pid.Kp,*chassis_speed_pid.Ki,*chassis_speed_pid.Kd);
+    DEBUG_printf("231disojciodjoa");
     //first order low-pass filter  replace ramp function
     //用一阶滤波代替斜波函数生成
     //first_order_filter_init(&chassis_cmd_slow_set_vx, CHASSIS_CONTROL_TIME, chassis_x_order_filter);

@@ -24,6 +24,7 @@ C_SRCS += \
 ../motor_drive.c \
 ../pid.c \
 ./syscfg/ti_drivers_config.c \
+../speed_measure.c \
 ../spi_lcd.c \
 ../uart.c \
 ../ui.c 
@@ -49,6 +50,7 @@ C_DEPS += \
 ./motor_drive.d \
 ./pid.d \
 ./syscfg/ti_drivers_config.d \
+./speed_measure.d \
 ./spi_lcd.d \
 ./uart.d \
 ./ui.d 
@@ -68,6 +70,7 @@ OBJS += \
 ./motor_drive.obj \
 ./pid.obj \
 ./syscfg/ti_drivers_config.obj \
+./speed_measure.obj \
 ./spi_lcd.obj \
 ./uart.obj \
 ./ui.obj 
@@ -94,6 +97,7 @@ OBJS__QUOTED += \
 "motor_drive.obj" \
 "pid.obj" \
 "syscfg/ti_drivers_config.obj" \
+"speed_measure.obj" \
 "spi_lcd.obj" \
 "uart.obj" \
 "ui.obj" 
@@ -117,6 +121,7 @@ C_DEPS__QUOTED += \
 "motor_drive.d" \
 "pid.d" \
 "syscfg/ti_drivers_config.d" \
+"speed_measure.d" \
 "spi_lcd.d" \
 "uart.d" \
 "ui.d" 
@@ -139,6 +144,7 @@ C_SRCS__QUOTED += \
 "../motor_drive.c" \
 "../pid.c" \
 "./syscfg/ti_drivers_config.c" \
+"../speed_measure.c" \
 "../spi_lcd.c" \
 "../uart.c" \
 "../ui.c" 

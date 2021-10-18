@@ -153,8 +153,24 @@ uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packa
 uart.obj: /home/hq/workspace_v10/project/header/pid.h
 uart.obj: /home/hq/workspace_v10/project/header/struct_typedef.h
 uart.obj: /home/hq/workspace_v10/project/header/receiver.h
-uart.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h
-uart.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/System.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h
+uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h
 uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__prologue.h
@@ -169,6 +185,10 @@ uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstanc
 uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+uart.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h
+uart.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h
+uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
 uart.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Task.h
 uart.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
@@ -533,9 +553,41 @@ syscfg/ti_drivers_config.h:
 
 /home/hq/workspace_v10/project/header/receiver.h:
 
-/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h:
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/System.h:
 
-/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h:
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Assert.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IModule.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/ISystemSupport.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGateProvider.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_SupportProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/package/System_Module_GateProxy.h:
+
+/opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h:
 
@@ -564,6 +616,14 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h:
+
+/opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdio.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
 

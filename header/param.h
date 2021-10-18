@@ -68,7 +68,11 @@ typedef struct
     int circle_num;
     int circle_en;
 
+
+    float single_motor_pid[4][3];
+
 }param_ty;
+
 
 typedef struct pid
 {

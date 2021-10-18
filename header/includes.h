@@ -37,8 +37,15 @@
 
 #include "receiver.h"
 
+#include <xdc/runtime/System.h>
+#include <xdc/runtime/Error.h>
+#include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Clock.h>
+
 #define FALSE 0U
 #define TRUE 1U
+
+extern fp32 speed_wheel[4];
 
 typedef struct _IMU3
 {

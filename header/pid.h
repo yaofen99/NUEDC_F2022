@@ -44,6 +44,8 @@ typedef struct
     fp32 Dbuf[3];  //微分项 0最新 1上一次 2上上次
     fp32 error[3]; //误差项 0最新 1上一次 2上上次
 
+    fp32 speed_set;
+
 } pid_type_def;
 /**
   * @brief          pid struct data init
