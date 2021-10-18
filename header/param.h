@@ -8,7 +8,8 @@
 
                                                             /*  debug mode  */
 //#define NORMAL_DEBUG
-#define VOFA_DEBUG
+//#define VOFA_DEBUG
+#define SERIAL_PID_DEBUG
 
 
                                                        /*  PID controller params  */
@@ -74,9 +75,9 @@ typedef struct pid
       float ref;     //系统待调节量的设定值
       float fdb;  //系统待调节量的反馈值，就是传感器实际测量的值
 
-      float KP;                 //比例系数
-      float KI;                 //积分系数
-      float KD;                 //微分系数
+      float* KP;                 //比例系数
+      float* KI;                 //积分系数
+      float* KD;                 //微分系数
 
       float T;        //离散化系统的采样周期
 

@@ -27,9 +27,9 @@ typedef struct
 {
     uint8_t mode;
     //PID 三参数
-    fp32 Kp;
-    fp32 Ki;
-    fp32 Kd;
+    fp32* Kp;
+    fp32* Ki;
+    fp32* Kd;
 
     fp32 max_out;  //最大输出
     fp32 max_iout; //最大积分输出

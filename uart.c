@@ -54,7 +54,17 @@ static   UART_Handle uart1 = NULL;
 static   UART_Handle uart2 = NULL;
 static   UART_Handle uart3 = NULL;
 static   recv_T   uart1Read;
+static   recv_T   uart2Read;
+static   recv_T   uart3Read;
 static   uint8_t  write_buf[UART_MAX_READ_SIZE];
+
+
+
+static void Uart2_onebyte_RecvEvt(void);
+static void Uart2_frame_ana_MoveEvt(void);
+
+void Uart3_onebyte_RecvEvt(void);
+void Uart3_frame_ana_MoveEvt(void);
 
 /*================= MPU9250 ===============*/
 
@@ -79,7 +89,8 @@ static void uartWriteCallback(UART_Handle handle, void *writeBuf, size_t size)
 /*set uart2 receive callback*/
 static void uart2ReadCallback(UART_Handle handle, void *rxBuf, size_t size)
 {
-
+    uart2Read.size = uart2Read.size + size;
+    Event_post(ecoEventHd,UART2_RECV_EVT);
 }
 /*set uart2 write callback*/
 static void uart2WriteCallback(UART_Handle handle, void *writeBuf, size_t size)
@@ -96,6 +107,9 @@ static void uart3WriteCallback(UART_Handle handle, void *rxBuf, size_t size)
 {
 
 }
+
+
+
 
 uint8_t CheckSum(uint8_t *Buf,uint8_t Len)
 {
@@ -249,7 +263,10 @@ static void User_uart_init(void)
     uartParams.readCallback   = uart2ReadCallback;
     uartParams.writeCallback  = uart2WriteCallback;
     uartParams.readEcho = UART_ECHO_OFF;
-    uartParams.baudRate = 115200;
+    uartParams.dataLength     = UART_LEN_8;
+    //uartParams.baudRate = 100000;
+    uartParams.stopBits = UART_STOP_TWO;
+    uartParams.parityType = UART_PAR_EVEN;
 
     uart2 = UART_open(CONFIG_UART_2, &uartParams);
 
@@ -305,8 +322,10 @@ void *uart_Thread(void *arg0)
     while(1)
     {
         uint32_t events;
-        events = Event_pend(ecoEventHd, Event_Id_NONE, ET_ALL_EVENTS,
+        events = Event_pend(ecoEventHd, Event_Id_NONE, UART_ALL_EVENTS,
                             BIOS_WAIT_FOREVER );
+        /*uart1 function*/
+
         if(events & ECO_UART_RECV_EVT)
         {
             handleRecvEvt();
@@ -315,6 +334,37 @@ void *uart_Thread(void *arg0)
         {
             handleMoveEvt();
         }
+
+        /*uart2 function*/
+
+        /*
+#define UART2_RECV_EVT           Event_Id_26
+#define UART2_WRITE_EVT          Event_Id_25
+#define UART2_MOVE_DATA_EVT      Event_Id_24
+
+#define UART3_RECV_EVT           Event_Id_23
+#define UART3_WRITE_EVT          Event_Id_22
+#define UART3_MOVE_DATA_EVT      Event_Id_21
+         * */
+        if(events & UART2_RECV_EVT)
+        {
+            Uart2_onebyte_RecvEvt();
+        }
+        if(events & UART2_MOVE_DATA_EVT)
+        {
+            Uart2_frame_ana_MoveEvt();
+        }
+
+        if(events & UART3_RECV_EVT)
+        {
+            Uart3_onebyte_RecvEvt();
+        }
+        if(events & UART3_MOVE_DATA_EVT)
+        {
+            Uart3_frame_ana_MoveEvt();
+        }
+
+
     }
 }
 
@@ -363,4 +413,118 @@ void ccd_send_data2(uint8_t *dat)
         uart3_SendData(dat[i] );
     }
     uart3_SendData(0XFF);
+}
+
+
+//@note user code
+
+/*接收后事件*/
+static void Uart2_onebyte_RecvEvt(void)
+{
+    static uint8_t rx_index = 0;
+
+    int i=0;
+
+    i++;
+
+    /*接收首字节0x55及 和校验正确*/
+    if((0x55 == uart1Read.buf[0]) && (uart1Read.buf[10] == CheckSum(uart1Read.buf, 10)))
+    {
+        rx_index = 0;
+        /*一帧接收结束  进行处理*/
+        Event_post(ecoEventHd,ECO_MOVE_DATA_EVT);
+        return;
+    }
+    /*接收首字节0x55*/
+    if(0x55 == uart1Read.buf[rx_index])
+    {
+        memset( uart1Read.buf, 0x00, sizeof(uart1Read.buf));
+        uart1Read.size = 1;
+        uart1Read.buf[0] = 0x55;
+        rx_index = 0;
+    }
+    /*正常接收下一字节*/
+    {
+        rx_index ++ ;
+        /*接收下一个字节*/
+        UART_read(uart1, &uart1Read.buf[rx_index], 1);
+    }
+}
+
+void rc_data_analyse(uint8_t* receive_buf)
+{
+    switch (receive_buf[1])
+    {
+        case (0x51) :
+        {
+            imu3.acc[0]=(int16_t)(receive_buf[3]<<8|receive_buf[2])*9.8*16/32768;
+            imu3.acc[1]=(int16_t)(receive_buf[5]<<8|receive_buf[4])*9.8*16/32768;
+            imu3.acc[2]=(int16_t)(receive_buf[7]<<8|receive_buf[6])*9.8*16/32768;
+            break;
+        }
+        case (0x52) :
+        {
+            imu3.gyro[0]=(int16_t)(receive_buf[3]<<8|receive_buf[2])*2000/32768;
+            imu3.gyro[1]=(int16_t)(receive_buf[5]<<8|receive_buf[4])*2000/32768;
+            imu3.gyro[2]=(int16_t)(receive_buf[7]<<8|receive_buf[6])*2000/32768;
+            break;
+        }
+        case (0x53) :
+        {
+            imu3.agl[0]=((int16_t)(receive_buf[3]<<8|receive_buf[2]))*180/ 32768;
+            imu3.agl[1]=((int16_t)(receive_buf[5]<<8|receive_buf[4]))*180/ 32768;
+            imu3.agl[2]=((int16_t)(receive_buf[7]<<8|receive_buf[6]))*180/ 32768;
+            imu.rol = imu3.agl[0] ;
+            imu.pit = imu3.agl[1] ;
+            imu.yaw = imu3.agl[2];
+            imu.temp = (int16_t)(receive_buf[9]<<8|receive_buf[8])/100;
+            break;
+        }
+    }
+    static int count = 0;
+    count++;
+    //if(0 == count%50)
+    {
+#ifdef NORMAL_DEBUG
+//        DEBUG_printf( "acc:%f,%f,%f\n",imu3.acc[0],imu3.acc[1],imu3.acc[2]);
+//        DEBUG_printf("gyro:%f,%f,%f\n", imu3.gyro[0],imu3.gyro[1],imu3.gyro[2]);
+//        DEBUG_printf( "agl:%f,%f,%f\n", imu3.agl[0],imu3.agl[1],imu3.agl[2]);
+//        DEBUG_printf( "temp:%f\n", imu.temp);
+#endif
+#ifdef VOFA_DEBUG
+        /*
+         * costomize debug
+         * */
+//        DEBUG_printf( "%f,%f,%f,%f,%f,%f,%f,%f,%f\n",
+//                      imu3.acc[0],imu3.acc[1],imu3.acc[2],
+//                      imu3.gyro[0],imu3.gyro[1],imu3.gyro[2],
+//                      imu3.agl[0],imu3.agl[1],imu3.agl[2],imu.temp);
+#endif
+    }
+}
+
+/*处理一帧字符事件*/
+static void Uart2_frame_ana_MoveEvt(void)
+{
+    memset(write_buf, 0x00, sizeof(write_buf));
+    memcpy(write_buf, uart1Read.buf, uart1Read.size);
+//    ecoWriteData(write_buf, uart1Read.size);
+    if(0x55 == uart1Read.buf[0])
+    {
+        rc_data_analyse(uart1Read.buf);
+    }
+    memset( uart1Read.buf, 0x00, sizeof(uart1Read.buf));
+    uart1Read.size = 0;
+    /*接收下一帧数据*/
+    UART_read(uart1, &uart1Read.buf[0], 1);
+}
+
+
+void Uart3_onebyte_RecvEvt()
+{
+
+}
+void Uart3_frame_ana_MoveEvt(void)
+{
+
 }

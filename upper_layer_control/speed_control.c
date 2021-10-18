@@ -19,12 +19,28 @@
 
 pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
 pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
+pid_type_def chassis_speed_pid;
 
 fp32 speed_set;
 fp32 speed_set_motor;
 
+fp32 speed_wheel[4];
+
 void *speed_control_Thread(void *arg0)
 {
+    chassis_init();
+    while(1){
+
+    }
+
+}
+
+void get_speed (void)
+{
+    static fp32 past_encoder[4];
+    int encoder1_speed ,encoder2_speed, encoder3_speed, encoder4_speed;
+    encoder1_speed = get_encoder1();
+
 
 
 }
@@ -35,6 +51,10 @@ first_order_filter_type_t chassis_cmd_slow_set_vy;  //use first order filter to 
 
 void chassis_init(void)
 {
+    chassis_speed_pid.Kp = &param.motor_kp;
+    chassis_speed_pid.Ki = &param.motor_ki;
+    chassis_speed_pid.Kd = &param.motor_kd;
+
 
     //chassis motor speed PID
     //底盘速度环pid值
@@ -62,6 +82,6 @@ void chassis_init(void)
 
     //first order low-pass filter  replace ramp function
     //用一阶滤波代替斜波函数生成
-    first_order_filter_init(&chassis_cmd_slow_set_vx, CHASSIS_CONTROL_TIME, chassis_x_order_filter);
-    first_order_filter_init(&chassis_cmd_slow_set_vy, CHASSIS_CONTROL_TIME, chassis_y_order_filter);
+    //first_order_filter_init(&chassis_cmd_slow_set_vx, CHASSIS_CONTROL_TIME, chassis_x_order_filter);
+    //first_order_filter_init(&chassis_cmd_slow_set_vy, CHASSIS_CONTROL_TIME, chassis_y_order_filter);
 }

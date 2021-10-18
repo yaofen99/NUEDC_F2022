@@ -1,7 +1,7 @@
 /*
  * uart2.h
  *
- *  Created on: 2021Äê8ÔÂ4ÈÕ
+ *  Created on: 2021ï¿½ï¿½8ï¿½ï¿½4ï¿½ï¿½
  *      Author: sundm
  */
 
@@ -13,15 +13,32 @@
 #define ECO_UART_WRITE_EVT       Event_Id_28
 #define ECO_MOVE_DATA_EVT        Event_Id_27
 
-#define ET_ALL_EVENTS            (ECO_UART_RECV_EVT    |\
+//@user
+#define UART2_RECV_EVT           Event_Id_26
+#define UART2_WRITE_EVT          Event_Id_25
+#define UART2_MOVE_DATA_EVT      Event_Id_24
+
+#define UART3_RECV_EVT           Event_Id_23
+#define UART3_WRITE_EVT          Event_Id_22
+#define UART3_MOVE_DATA_EVT      Event_Id_21
+
+#define UART_ALL_EVENTS          (ECO_UART_RECV_EVT    |\
                                   ECO_UART_WRITE_EVT   |\
-                                  ECO_MOVE_DATA_EVT)
+                                  ECO_MOVE_DATA_EVT    |\
+                                  UART2_RECV_EVT    |\
+                                  UART2_WRITE_EVT   |\
+                                  UART2_MOVE_DATA_EVT |\
+                                  UART3_RECV_EVT    |\
+                                  UART3_WRITE_EVT   |\
+                                  UART3_MOVE_DATA_EVT)
+
+
 
 
 void uart2_WriteData(unsigned char *buf,unsigned short size);
 void uart3_WriteData(unsigned char *buf,unsigned short size);
 void uart3_SendData(unsigned char dat);
-void ccd_send_data2(uint8_t *dat);/*ºìÊ÷Î°ÒµCCDÉÏÎ»»úÐ­Òé*/
-void ccd_send_data(uint8_t *dat);/*Öð·ÉÉÏÎ»»úCCDÐ­Òé*/
+void ccd_send_data2(uint8_t *dat);/*ï¿½ï¿½ï¿½ï¿½Î°ÒµCCDï¿½ï¿½Î»ï¿½ï¿½Ð­ï¿½ï¿½*/
+void ccd_send_data(uint8_t *dat);/*ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½CCDÐ­ï¿½ï¿½*/
 
 #endif /* UART1_H_ */

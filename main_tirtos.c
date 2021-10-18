@@ -240,17 +240,17 @@ int main(void)
 //    Clock_Params clkParams;
 //
 //    Clock_Params_init(&clkParams);
-    //clkParams.period = 5000/Clock_tickPeriod;
-    //clkParams.startFlag = FALSE;
-
-    /* Construct a periodic Clock Instance */
-    //Clock_construct(&clk0Struct, (Clock_FuncPtr)clk0Fxn,
-    //                5000/Clock_tickPeriod, &clkParams);
-
-    //clkParams.period = 0;
-    //clkParams.startFlag = FALSE;
-
-    /* Construct a one-shot Clock Instance */
+//    clkParams.period = 5000/Clock_tickPeriod;
+//    clkParams.startFlag = FALSE;
+//
+//    /* Construct a periodic Clock Instance */
+//    Clock_construct(&clk0Struct, (Clock_FuncPtr)clk0Fxn,
+//                    5000/Clock_tickPeriod, &clkParams);
+//
+//    clkParams.period = 0;
+//    clkParams.startFlag = FALSE;
+//
+//    /* Construct a one-shot Clock Instance */
 //    Clock_construct(&clk1Struct, (Clock_FuncPtr)clk1Fxn,
 //                    11000/Clock_tickPeriod, &clkParams);
 //
