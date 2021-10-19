@@ -43,6 +43,7 @@ speed_measure.obj: /home/hq/workspace_v10/project/header/lcd_font.h
 speed_measure.obj: /home/hq/workspace_v10/project/header/ec11.h
 speed_measure.obj: /home/hq/workspace_v10/project/header/ui.h
 speed_measure.obj: /home/hq/workspace_v10/project/header/param.h
+speed_measure.obj: /home/hq/workspace_v10/project/header/includes.h
 speed_measure.obj: /home/hq/workspace_v10/project/header/encoder.h
 speed_measure.obj: /home/hq/workspace_v10/project/header/event.h
 speed_measure.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
@@ -273,6 +274,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/ui.h:
 
 /home/hq/workspace_v10/project/header/param.h:
+
+/home/hq/workspace_v10/project/header/includes.h:
 
 /home/hq/workspace_v10/project/header/encoder.h:
 

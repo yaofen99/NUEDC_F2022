@@ -42,6 +42,8 @@
 #include <ti/sysbios/BIOS.h>
 #include <ti/sysbios/knl/Clock.h>
 
+#include "struct_typedef.h"
+
 #define FALSE 0U
 #define TRUE 1U
 
@@ -77,10 +79,10 @@ extern int lua ;
 extern uint8_t gPixel[128];
 extern int lua ;
 
-extern pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
-extern pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
-
-extern pid_type_def chassis_speed_pid;
+//
+//extern pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
+//extern pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
+//extern pid_type_def chassis_speed_pid;
 
 void Console_Print( const char *buffer);
 

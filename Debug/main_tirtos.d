@@ -97,6 +97,7 @@ main_tirtos.obj: /home/hq/workspace_v10/project/header/lcd_font.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/ec11.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/ui.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/param.h
+main_tirtos.obj: /home/hq/workspace_v10/project/header/includes.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/encoder.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/motor.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/event.h
@@ -382,6 +383,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/ui.h:
 
 /home/hq/workspace_v10/project/header/param.h:
+
+/home/hq/workspace_v10/project/header/includes.h:
 
 /home/hq/workspace_v10/project/header/encoder.h:
 

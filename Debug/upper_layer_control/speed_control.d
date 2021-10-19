@@ -43,6 +43,7 @@ upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/lcd
 upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/ec11.h
 upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/ui.h
 upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/param.h
+upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/includes.h
 upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/encoder.h
 upper_layer_control/speed_control.obj: /home/hq/workspace_v10/project/header/event.h
 upper_layer_control/speed_control.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
@@ -273,6 +274,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/ui.h:
 
 /home/hq/workspace_v10/project/header/param.h:
+
+/home/hq/workspace_v10/project/header/includes.h:
 
 /home/hq/workspace_v10/project/header/encoder.h:
 

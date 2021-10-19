@@ -18,9 +18,9 @@
 #include "includes.h"
 
 //imprtant param about speed
-pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
-pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
-pid_type_def chassis_speed_pid;
+pid_type_def *motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
+pid_type_def *chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
+pid_type_def *chassis_speed_pid;
 
 fp32 speed_set;
 fp32 speed_set_motor;
@@ -41,7 +41,8 @@ void *speed_control_Thread(void *arg0)
         //计算pid
         for (i = 0; i < 4; i++)
         {
-            PID_calc(&motor_speed_pid[i], speed_wheel[i], motor_speed_pid[i].speed_set);
+            PID_calc(&motor_speed_pid[i], speed_wheel[i], (*motor_speed_pid[i]).speed_set);
+            //@user confused
         }
 
         usleep(200000);
@@ -56,26 +57,12 @@ first_order_filter_type_t chassis_cmd_slow_set_vy;  //use first order filter to 
 
 void chassis_init(void)
 {
-    chassis_speed_pid.Kp = &param.motor_kp;
-    chassis_speed_pid.Ki = &param.motor_ki;
-    chassis_speed_pid.Kd = &param.motor_kd;
+    chassis_speed_pid = &param.speed_pid;
 
-    motor_speed_pid[0].Kp = &param.single_motor_pid[0][0];
-    motor_speed_pid[0].Ki = &param.single_motor_pid[0][1];
-    motor_speed_pid[0].Kd = &param.single_motor_pid[0][2];
-
-    motor_speed_pid[1].Kp = &param.single_motor_pid[1][0];
-    motor_speed_pid[1].Ki = &param.single_motor_pid[1][1];
-    motor_speed_pid[1].Kd = &param.single_motor_pid[1][2];
-
-    motor_speed_pid[2].Kp = &param.single_motor_pid[2][0];
-    motor_speed_pid[2].Ki = &param.single_motor_pid[2][1];
-    motor_speed_pid[2].Kd = &param.single_motor_pid[2][2];
-
-    motor_speed_pid[3].Kp = &param.single_motor_pid[3][0];
-    motor_speed_pid[3].Ki = &param.single_motor_pid[3][1];
-    motor_speed_pid[3].Kd = &param.single_motor_pid[3][2];
-
+    motor_speed_pid[0] = &param.single_motor_pid;
+//    motor_speed_pid[0] = &param.single_motor_pid[0][0];
+//    motor_speed_pid[0] = &param.single_motor_pid[0][1];
+//    motor_speed_pid[0] = &param.single_motor_pid[0][2];
 
     //chassis motor speed PID
     //底盘速度环pid值
@@ -100,10 +87,10 @@ void chassis_init(void)
 //    }
     //initialize angle PID
     //初始化角度PID
-    PID_init(&chassis_angle_pid, PID_POSITION, chassis_yaw_pid, ANGLE_PID_MAX_OUT, ANGLEL_PID_MAX_IOUT);
+    //PID_init(&chassis_angle_pid, PID_POSITION, chassis_yaw_pid, ANGLE_PID_MAX_OUT, ANGLEL_PID_MAX_IOUT);
 
-    DEBUG_printf("%f,%f,%f",*chassis_speed_pid.Kp,*chassis_speed_pid.Ki,*chassis_speed_pid.Kd);
-    DEBUG_printf("231disojciodjoa");
+//    DEBUG_printf("%f,%f,%f",*chassis_speed_pid.Kp,*chassis_speed_pid.Ki,*chassis_speed_pid.Kd);
+//    DEBUG_printf("231disojciodjoa");
     //first order low-pass filter  replace ramp function
     //用一阶滤波代替斜波函数生成
     //first_order_filter_init(&chassis_cmd_slow_set_vx, CHASSIS_CONTROL_TIME, chassis_x_order_filter);

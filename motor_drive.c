@@ -13,13 +13,13 @@
 /* Driver configuration */
 #include "ti_drivers_config.h"
 
-#include "PID.h"
+//#include "PID.h"
 /*
  *  ======== mainThread ========
  *  Task periodically increments the PWM duty for the on board LED.
  */
 
-
+//this thread is used for maintain the inner loop (mainly pid calculation of )
 void *motor_pwm_Thread(void *arg0)
 {
     /* Period and duty in microseconds */
@@ -63,22 +63,22 @@ void *motor_pwm_Thread(void *arg0)
 
     /* Loop forever incrementing the PWM duty */
     while (1) {
-        PWM_setDuty(pwm1, duty);
-        PWM_setDuty(pwm2, pwmPeriod - duty);
-
-        duty = (duty + dutyInc);
-
-        if (duty == pwmPeriod || (!duty)) {
-            dutyInc = - dutyInc;
-        }
-
-        if((duty_motor>=pwmPeriod)||(duty_motor<=-pwmPeriod))
-            dir_flag = !dir_flag;
-        if(dir_flag==0)
-            duty_motor +=100;
-        else
-            duty_motor -=100;
-        motor_left_right_duty(duty_motor, duty_motor);
+//        PWM_setDuty(pwm1, duty);
+//        PWM_setDuty(pwm2, pwmPeriod - duty);
+//
+//        duty = (duty + dutyInc);
+//
+//        if (duty == pwmPeriod || (!duty)) {
+//            dutyInc = - dutyInc;
+//        }
+//
+//        if((duty_motor>=pwmPeriod)||(duty_motor<=-pwmPeriod))
+//            dir_flag = !dir_flag;
+//        if(dir_flag==0)
+//            duty_motor +=100;
+//        else
+//            duty_motor -=100;
+//        motor_left_right_duty(duty_motor, duty_motor);
 //        motor_duty(0,duty_motor);
 //        motor_duty(1,duty_motor);
 //        motor_duty(2,duty_motor);

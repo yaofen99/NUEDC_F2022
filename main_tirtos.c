@@ -270,9 +270,6 @@ int main(void)
     return (0);
 }
 
-
-
-
 /*
  *  ======== clk0Fxn =======
  */

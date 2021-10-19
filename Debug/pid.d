@@ -42,6 +42,7 @@ pid.obj: /home/hq/workspace_v10/project/header/lcd_font.h
 pid.obj: /home/hq/workspace_v10/project/header/ec11.h
 pid.obj: /home/hq/workspace_v10/project/header/ui.h
 pid.obj: /home/hq/workspace_v10/project/header/param.h
+pid.obj: /home/hq/workspace_v10/project/header/includes.h
 pid.obj: /home/hq/workspace_v10/project/header/encoder.h
 pid.obj: /home/hq/workspace_v10/project/header/motor.h
 pid.obj: /home/hq/workspace_v10/project/header/event.h
@@ -152,6 +153,7 @@ pid.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
 pid.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IInstance.h
 pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h
 pid.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h
+pid.obj: /home/hq/workspace_v10/project/header/pid.h
 pid.obj: /home/hq/workspace_v10/project/header/receiver.h
 pid.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/System.h
 pid.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Types.h
@@ -270,6 +272,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/ui.h:
 
 /home/hq/workspace_v10/project/header/param.h:
+
+/home/hq/workspace_v10/project/header/includes.h:
 
 /home/hq/workspace_v10/project/header/encoder.h:
 
@@ -490,6 +494,8 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/interfaces/ITimer.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/package/Clock_TimerProxy.h:
+
+/home/hq/workspace_v10/project/header/pid.h:
 
 /home/hq/workspace_v10/project/header/receiver.h:
 

@@ -23,7 +23,6 @@ motor_drive.obj: syscfg/ti_drivers_config.h
 motor_drive.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/DeviceFamily.h
 motor_drive.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/I2C.h
 motor_drive.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h
-motor_drive.obj: /home/hq/workspace_v10/project/header/PID.h
 
 ../motor_drive.c:
 
@@ -70,6 +69,4 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/I2C.h:
 
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h:
-
-/home/hq/workspace_v10/project/header/PID.h:
 

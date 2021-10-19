@@ -35,7 +35,7 @@ void *speed_measure_Thread(void *arg0)
 //    DEBUG_printf("%d,%d,%d,%f\n",encoder[0],last_encoder[0],encoder[0]-last_encoder[0],speed_wheel[0]);
 //    DEBUG_printf("%f,%f,%f,%f \n",speed_wheel[0],speed_wheel[1],speed_wheel[2],speed_wheel[3]);
 
-    DEBUG_printf("%f,%f,%f",*motor_speed_pid[0].Kp,*motor_speed_pid[0].Ki,*motor_speed_pid[0].Kd);
+//    DEBUG_printf("%f,%f,%f",motor_speed_pid[0].Kp,motor_speed_pid[0].Ki,motor_speed_pid[0].Kd);
 
 
     last_encoder[0] = encoder[0];
@@ -44,6 +44,6 @@ void *speed_measure_Thread(void *arg0)
     last_encoder[3] = encoder[3];
     last_time = time;
 
-    usleep(10000);
+    usleep(100);
     }
 }

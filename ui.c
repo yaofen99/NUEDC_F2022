@@ -45,25 +45,49 @@ param_ty param = {
     .circle_num = 0,
     .circle_en = 1,
 
-    .motor_kp = 24.0,
-    .motor_ki = 0.0,
-    .motor_kd = 0.0,
+//    typedef struct
+//    {
+//        uint8_t mode;
+//        //PID 三参数
+//        float Kp;
+//        float Ki;
+//        float Kd;
+//
+//        float max_out;  //最大输出
+//        float max_iout; //最大积分输出
+//
+//        float set;
+//        float fdb;
+//
+//        float out;
+//        float Pout;
+//        float Iout;
+//        float Dout;
+//        float Dbuf[3];  //微分项 0最新 1上一次 2上上次
+//        float error[3]; //误差项 0最新 1上一次 2上上次
+//
+//        float speed_set;
+//
+//    } pid_type_def;
 
-    .single_motor_pid[0][0]=1,
-    .single_motor_pid[0][1]=0,
-    .single_motor_pid[0][2]=0,
 
-    .single_motor_pid[1][0]=1,
-    .single_motor_pid[1][1]=0,
-    .single_motor_pid[1][2]=0,
+//    .speed_pid.Kp = 24
 
-    .single_motor_pid[2][0]=1,
-    .single_motor_pid[2][1]=0,
-    .single_motor_pid[2][2]=0,
+//    .single_motor_pid[0].Kp=1,
+//    .single_motor_pid[0].=0,
+//    .single_motor_pid[0][2]=0,
 
-    .single_motor_pid[3][0]=1,
-    .single_motor_pid[3][1]=0,
-    .single_motor_pid[3][2]=0,
+    .single_motor_pid[1].Kp=1,
+//    .single_motor_pid[1][1]=0,
+//    .single_motor_pid[1][2]=0,
+
+    .single_motor_pid[2].Kp=1,
+//    .single_motor_pid[2][1]=0,
+//    .single_motor_pid[2][2]=0,
+
+    .single_motor_pid[3].Kp=1,
+//    .single_motor_pid[3][1]=0,
+//    .single_motor_pid[3][2]=0,
 };
 
 //@note

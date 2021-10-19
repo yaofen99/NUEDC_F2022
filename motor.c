@@ -190,7 +190,6 @@ void motor_left_right_duty(int left_duty, int right_duty)
 
 void motor_duty(int motor_num, int duty)
 {
-
     if(duty > 0)
         duty += MOTOR_DEAD_VAL;
     else

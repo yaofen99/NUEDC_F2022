@@ -45,6 +45,7 @@ buttonled.obj: /home/hq/workspace_v10/project/header/lcd_font.h
 buttonled.obj: /home/hq/workspace_v10/project/header/ec11.h
 buttonled.obj: /home/hq/workspace_v10/project/header/ui.h
 buttonled.obj: /home/hq/workspace_v10/project/header/param.h
+buttonled.obj: /home/hq/workspace_v10/project/header/includes.h
 buttonled.obj: /home/hq/workspace_v10/project/header/encoder.h
 buttonled.obj: /home/hq/workspace_v10/project/header/motor.h
 buttonled.obj: /home/hq/workspace_v10/project/header/event.h
@@ -278,6 +279,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/ui.h:
 
 /home/hq/workspace_v10/project/header/param.h:
+
+/home/hq/workspace_v10/project/header/includes.h:
 
 /home/hq/workspace_v10/project/header/encoder.h:
 
