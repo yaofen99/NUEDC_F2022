@@ -47,6 +47,7 @@ spi_lcd.obj: /home/hq/workspace_v10/project/header/param.h
 spi_lcd.obj: /home/hq/workspace_v10/project/header/includes.h
 spi_lcd.obj: /home/hq/workspace_v10/project/header/encoder.h
 spi_lcd.obj: /home/hq/workspace_v10/project/header/motor.h
+spi_lcd.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 spi_lcd.obj: /home/hq/workspace_v10/project/header/event.h
 spi_lcd.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
 spi_lcd.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/apps/Button.h
@@ -190,6 +191,7 @@ spi_lcd.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGate
 spi_lcd.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h
 spi_lcd.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
 spi_lcd.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+spi_lcd.obj: /home/hq/workspace_v10/project/header/motor.h
 
 ../spi_lcd.c:
 
@@ -284,6 +286,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/encoder.h:
 
 /home/hq/workspace_v10/project/header/motor.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
 
 /home/hq/workspace_v10/project/header/event.h:
 
@@ -570,4 +574,6 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/home/hq/workspace_v10/project/header/motor.h:
 

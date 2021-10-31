@@ -5,6 +5,8 @@
  *      Author: sundm
  */
 
+#include <ti/drivers/PWM.h>
+
 #ifndef MOTOR_H_
 #define MOTOR_H_
 
@@ -24,6 +26,12 @@ void motor_duty(int motor_num, int duty);
 void motor_left_right_duty(int left_duty, int right_duty);
 static inline int get_left_duty(void) {return left_duty;};
 static inline int get_right_duty(void) {return right_duty;};
+
+extern PWM_Handle pwm0;
+extern PWM_Handle pwm1;
+extern PWM_Handle pwm2;
+extern PWM_Handle pwm3;
+
 
 
 #endif /* MOTOR_H_ */

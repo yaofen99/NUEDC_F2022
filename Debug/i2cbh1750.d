@@ -43,6 +43,7 @@ i2cbh1750.obj: /home/hq/workspace_v10/project/header/param.h
 i2cbh1750.obj: /home/hq/workspace_v10/project/header/includes.h
 i2cbh1750.obj: /home/hq/workspace_v10/project/header/encoder.h
 i2cbh1750.obj: /home/hq/workspace_v10/project/header/motor.h
+i2cbh1750.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 i2cbh1750.obj: /home/hq/workspace_v10/project/header/event.h
 i2cbh1750.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
 i2cbh1750.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/apps/Button.h
@@ -187,6 +188,7 @@ i2cbh1750.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGa
 i2cbh1750.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h
 i2cbh1750.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
 i2cbh1750.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+i2cbh1750.obj: /home/hq/workspace_v10/project/header/motor.h
 
 ../i2cbh1750.c:
 
@@ -273,6 +275,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/encoder.h:
 
 /home/hq/workspace_v10/project/header/motor.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
 
 /home/hq/workspace_v10/project/header/event.h:
 
@@ -561,4 +565,6 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/home/hq/workspace_v10/project/header/motor.h:
 

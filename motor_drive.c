@@ -13,6 +13,8 @@
 /* Driver configuration */
 #include "ti_drivers_config.h"
 
+#include "includes.h"
+
 //#include "PID.h"
 /*
  *  ======== mainThread ========
@@ -63,6 +65,8 @@ void *motor_pwm_Thread(void *arg0)
 
     /* Loop forever incrementing the PWM duty */
     while (1) {
+//        PWM_setDuty(pwm0, 800);
+
 //        PWM_setDuty(pwm1, duty);
 //        PWM_setDuty(pwm2, pwmPeriod - duty);
 //
@@ -83,6 +87,12 @@ void *motor_pwm_Thread(void *arg0)
 //        motor_duty(1,duty_motor);
 //        motor_duty(2,duty_motor);
 //        motor_duty(3,duty_motor);
+//        for (i = 0; i < 4; i++)
+//        {
+//
+//            //@user confused
+//          motor_left_right_duty(int left_duty, int right_duty);
+//        }
         usleep(time);
     }
 }

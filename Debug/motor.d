@@ -18,13 +18,13 @@ motor.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/cc
 motor.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/time.h
 motor.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/abi_prefix.h
 motor.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_time.h
-motor.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 motor.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/GPIO.h
 motor.obj: syscfg/ti_drivers_config.h
 motor.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/devices/DeviceFamily.h
 motor.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/I2C.h
 motor.obj: /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h
 motor.obj: /home/hq/workspace_v10/project/header/motor.h
+motor.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 
 ../motor.c:
 
@@ -62,8 +62,6 @@ motor.obj: /home/hq/workspace_v10/project/header/motor.h
 
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_time.h:
 
-/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
-
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/GPIO.h:
 
 syscfg/ti_drivers_config.h:
@@ -75,4 +73,6 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h:
 
 /home/hq/workspace_v10/project/header/motor.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
 

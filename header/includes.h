@@ -44,6 +44,22 @@
 
 #include "struct_typedef.h"
 
+
+//10.31
+#include <unistd.h>
+#include <stddef.h>
+
+/* Driver Header files */
+#include <ti/drivers/GPIO.h>
+
+/* Driver configuration */
+#include "ti_drivers_config.h"
+#include "motor.h"
+
+
+
+
+
 #define FALSE 0U
 #define TRUE 1U
 

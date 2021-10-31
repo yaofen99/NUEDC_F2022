@@ -382,7 +382,7 @@ void uart3_SendData(unsigned char dat)
 {
     unsigned char tmp = dat;
     UART_write(uart3,&tmp,1);
-    usleep(1);
+    usleep(10);
 }
 
 /*逐飞上位机CCD协议*/

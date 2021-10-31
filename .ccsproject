@@ -13,7 +13,7 @@
 	<ignoreDefaultDeviceSettings value="true"/>
 	<ignoreDefaultCCSSettings value="true"/>
 	<templateProperties value="id=pwmled2_MSP_EXP432P401R_tirtos_ccs.projectspec.pwmled2_MSP_EXP432P401R_tirtos_ccs,buildProfile=release,isHybrid=true"/>
-	<origin value="/home/hq/Downloads/project"/>
+	<origin value="/home/hq/workspace_v10/TI_MSP432"/>
 	<filesToOpen value=""/>
 	<isTargetManual value="false"/>
 </projectOptions>

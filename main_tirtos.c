@@ -176,32 +176,32 @@ int main(void)
         while (1) {}
     }
 
-    /*encoder_Thread config */
-    pthread_attr_init(&attrs);
+//    /*encoder_Thread config */
+//    pthread_attr_init(&attrs);
+//
+//    /* Set priority, detach state, and stack size attributes */
+//    priParam.sched_priority = 8;
+//    retc = pthread_attr_setschedparam(&attrs, &priParam);
+//    if (retc != 0) {
+//        /* failed to set attributes */
+//        while (1) {}
+//    }
 
-    /* Set priority, detach state, and stack size attributes */
-    priParam.sched_priority = 8;
-    retc = pthread_attr_setschedparam(&attrs, &priParam);
-    if (retc != 0) {
-        /* failed to set attributes */
-        while (1) {}
-    }
-
-    retc = pthread_create(&thread, &attrs, encoder_Thread, NULL);
-    if (retc != 0) {
-        /* pthread_create() failed */
-        while (1) {}
-    }
-
+//    retc = pthread_create(&thread, &attrs, encoder_Thread, NULL);
+//    if (retc != 0) {
+//        /* pthread_create() failed */
+//        while (1) {}
+//    }
+//
 
     /*beep_Thread config */
-    priParam.sched_priority = 9;
+    priParam.sched_priority = 8;
     retc = pthread_attr_setschedparam(&attrs, &priParam);
     if (retc != 0) {
         /* failed to set priority */
         while (1) {}
     }
-
+    //@note temp close
     retc = pthread_create(&thread, &attrs, beep_pwm_Thread, NULL);
     if (retc != 0) {
         /* pthread_create() failed */
@@ -263,7 +263,7 @@ int main(void)
     // 周期性打开中断回调函数有概率爆金币
     clockParams.startFlag = FALSE;
     // 只使用了定时功能，把下面的 NULL 替换成需要的函数handle就可
-    myClock = Clock_create(NULL,  0, &clockParams, &eb);
+    myClock = Clock_create(NULL,  50, &clockParams, &eb);
 
     BIOS_start();
 

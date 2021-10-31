@@ -45,6 +45,7 @@ adcTSL1401.obj: /home/hq/workspace_v10/project/header/param.h
 adcTSL1401.obj: /home/hq/workspace_v10/project/header/includes.h
 adcTSL1401.obj: /home/hq/workspace_v10/project/header/encoder.h
 adcTSL1401.obj: /home/hq/workspace_v10/project/header/motor.h
+adcTSL1401.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 adcTSL1401.obj: /home/hq/workspace_v10/project/header/event.h
 adcTSL1401.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
 adcTSL1401.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/apps/Button.h
@@ -188,6 +189,7 @@ adcTSL1401.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IG
 adcTSL1401.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h
 adcTSL1401.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
 adcTSL1401.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+adcTSL1401.obj: /home/hq/workspace_v10/project/header/motor.h
 
 ../adcTSL1401.c:
 
@@ -278,6 +280,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/encoder.h:
 
 /home/hq/workspace_v10/project/header/motor.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
 
 /home/hq/workspace_v10/project/header/event.h:
 
@@ -564,4 +568,6 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/home/hq/workspace_v10/project/header/motor.h:
 

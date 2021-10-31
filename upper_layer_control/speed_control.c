@@ -17,6 +17,8 @@
 
 #include "includes.h"
 
+
+
 //imprtant param about speed
 pid_type_def *motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
 pid_type_def *chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
@@ -33,9 +35,14 @@ void chassis_init(void);
 void *speed_control_Thread(void *arg0)
 {
     chassis_init();
+    usleep(2000);
+
+
     while(1){
         int i=0;
         //DEBUG_printf("System time in speed module = %lu\n", (ULong)time);
+
+
 
         //calculate pid
         //计算pid
@@ -45,11 +52,20 @@ void *speed_control_Thread(void *arg0)
             //@user confused
         }
 
-        usleep(200000);
+
+  //      motor_left_right_duty(1000 , 0 );
+
+       // motor_duty(1, 20);
+       PWM_setDuty(pwm0, 800);
+
+        usleep(200);
 
     }
 
 }
+
+
+//abaasdsadsadsa
 
 first_order_filter_type_t chassis_cmd_slow_set_vx;  //use first order filter to slow set-point.使用一阶低通滤波减缓设定值
 first_order_filter_type_t chassis_cmd_slow_set_vy;  //use first order filter to slow set-point.使用一阶低通滤波减缓设定值

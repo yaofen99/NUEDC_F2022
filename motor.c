@@ -8,7 +8,6 @@
 #include <stddef.h>
 
 /* Driver Header files */
-#include <ti/drivers/PWM.h>
 #include <ti/drivers/GPIO.h>
 
 /* Driver configuration */
@@ -124,6 +123,8 @@ void motor_init(void)
     }
 
     PWM_start(pwm0);
+
+//    PWM_setDuty(pwm0, 800);
 
     pwm1 = PWM_open(CONFIG_PWM_3, &params);
     if (pwm1 == NULL) {

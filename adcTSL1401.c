@@ -103,7 +103,7 @@ void *TSL1401_adc_Thread(void *arg0)
     {
         /* Blocking mode conversion */
         TSL1401_GetLine(adc, gPixel);
-        usleep(1);
+        usleep(50);
     }
     ADC_close(adc);
 

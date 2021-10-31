@@ -43,6 +43,7 @@ console.obj: /home/hq/workspace_v10/project/header/param.h
 console.obj: /home/hq/workspace_v10/project/header/includes.h
 console.obj: /home/hq/workspace_v10/project/header/encoder.h
 console.obj: /home/hq/workspace_v10/project/header/motor.h
+console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 console.obj: /home/hq/workspace_v10/project/header/event.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/apps/Button.h
@@ -187,6 +188,7 @@ console.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/IGate
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+console.obj: /home/hq/workspace_v10/project/header/motor.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/ccs/semaphore.h
 console.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/UART.h
 
@@ -275,6 +277,8 @@ syscfg/ti_drivers_config.h:
 /home/hq/workspace_v10/project/header/encoder.h:
 
 /home/hq/workspace_v10/project/header/motor.h:
+
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
 
 /home/hq/workspace_v10/project/header/event.h:
 
@@ -563,6 +567,8 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/home/hq/workspace_v10/project/header/motor.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/posix/ccs/semaphore.h:
 

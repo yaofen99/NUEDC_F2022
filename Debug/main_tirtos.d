@@ -100,6 +100,7 @@ main_tirtos.obj: /home/hq/workspace_v10/project/header/param.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/includes.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/encoder.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/motor.h
+main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h
 main_tirtos.obj: /home/hq/workspace_v10/project/header/event.h
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/apps/Button.h
@@ -189,6 +190,7 @@ main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/p
 main_tirtos.obj: /opt/ti/ccs1040/xdctools_3_62_01_15_core/packages/xdc/runtime/Error.h
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h
 main_tirtos.obj: /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h
+main_tirtos.obj: /home/hq/workspace_v10/project/header/motor.h
 
 ../main_tirtos.c:
 
@@ -390,6 +392,8 @@ syscfg/ti_drivers_config.h:
 
 /home/hq/workspace_v10/project/header/motor.h:
 
+/opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/PWM.h:
+
 /home/hq/workspace_v10/project/header/event.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/source/ti/drivers/utils/RingBuf.h:
@@ -567,4 +571,6 @@ syscfg/ti_drivers_config.h:
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/BIOS.h:
 
 /opt/ti/ccs1040/simplelink_msp432p4_sdk_3_40_01_02/kernel/tirtos/packages/ti/sysbios/knl/Clock.h:
+
+/home/hq/workspace_v10/project/header/motor.h:
 
