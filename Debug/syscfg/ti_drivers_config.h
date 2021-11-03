@@ -89,23 +89,23 @@ extern "C" {
 /* P3.6 */
 #define CONFIG_TFT_CS               23
 /* P6.2 */
-#define Infr_front1                 24
+#define Infr_back_5                 24
 /* P7.3 */
-#define Infr_front2                 25
+#define Infr_back_4                 25
 /* P7.1 */
-#define Infr_front3                 26
+#define Infr_back_3                 26
 /* P6.3 */
-#define Infr_front4                 27
+#define Infr_back_2                 27
 /* P8.0 */
-#define Infr_back1                  28
+#define Infr_back_1                 28
 /* P7.4 */
-#define Infr_back2                  29
+#define Infr_front_1                29
 /* P7.5 */
-#define Infr_back3                  30
+#define Infr_front_2                30
 /* P10.0 */
-#define Infr_back4                  31
+#define Infr_front_3                31
 /* P10.1 */
-#define Infr_back5                  32
+#define Infr_front_4                32
 /* P1.1, LaunchPad Button S1 (Left) */
 #define CONFIG_GPIO_0               33
 /* P1.4, LaunchPad Button S2 (Right) */

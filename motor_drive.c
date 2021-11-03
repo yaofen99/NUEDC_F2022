@@ -35,6 +35,7 @@ fp32 speed_wheel[4];
 float R4wd = 0.125;
 float Rw = 0.03;
 float Pi = 3.1415926;
+
 void FourWD(float Vx, float Wz)
 {
         int i=0;
@@ -50,6 +51,7 @@ void FourWD(float Vx, float Wz)
         w4 += wt;
 
 
+
         motor_speed_pid[0]->speed_set  =  w1;
         motor_speed_pid[1]->speed_set  =  w2;
         motor_speed_pid[2]->speed_set  =  w3;
@@ -57,10 +59,14 @@ void FourWD(float Vx, float Wz)
 
         //calculate pid
         //计算pid
-        for (i = 0; i < 4; i++)
-        {
-            PID_calc(motor_speed_pid[i], speed_wheel[i], motor_speed_pid[i]->speed_set);
-        }
+//        for (i = 0; i < 4; i++)
+//        {
+//            PID_calc(motor_speed_pid[i], speed_wheel[i], motor_speed_pid[i]->speed_set);
+//        }
+//        motor_duty(1, motor_speed_pid[0]->out);
+//        motor_duty(2, motor_speed_pid[1]->out);
+//        motor_duty(3, motor_speed_pid[2]->out);
+//        motor_duty(4, motor_speed_pid[3]->out);
 
   //      motor_left_right_duty(1000 , 0 );
 
@@ -68,10 +74,10 @@ void FourWD(float Vx, float Wz)
 //        DEBUG_printf("speed wheel:%f, %f, %f, %f \r\n",speed_wheel[1],speed_wheel[2],speed_wheel[3],speed_wheel[4]);
 //        DEBUG_printf("pid.ou :%f, %f, %f, %f \r\n",motor_speed_pid[0]->out,motor_speed_pid[1]->out,motor_speed_pid[2]->out,motor_speed_pid[3]->out);
 
-        motor_duty(1, motor_speed_pid[0]->out);
-        motor_duty(2, motor_speed_pid[1]->out);
-        motor_duty(3, motor_speed_pid[2]->out);
-        motor_duty(4, motor_speed_pid[3]->out);
+        motor_duty(1, w1);
+        motor_duty(2, w2);
+        motor_duty(3, w3);
+        motor_duty(4, w4);
 
 }
 
@@ -126,6 +132,9 @@ void chassis_init(void)
     //first_order_filter_init(&chassis_cmd_slow_set_vy, CHASSIS_CONTROL_TIME, chassis_y_order_filter);
 }
 
+char readgpio_front;
+
+char f1,f2,f3,f4;
 
 //this thread is used for maintain the inner loop (mainly pid calculation of )
 void *motor_pwm_Thread(void *arg0)
@@ -156,9 +165,6 @@ void *motor_pwm_Thread(void *arg0)
     if (pwm1 == NULL) {
         /* CONFIG_PWM_0 did not open */
         while (1){
-
-
-
         }
     }
 
@@ -174,11 +180,68 @@ void *motor_pwm_Thread(void *arg0)
 
     motor_init();
 
+    int speed[4],i;
+
+    for (i=0;i<4;i++)
+    {
+        speed[i] = 700;
+    }
+
     /* Loop forever incrementing the PWM duty */
     while (1) {
+        static
 
-        FourWD(5,0);
+        readgpio_front = GPIO_read(Infr_front_4) + GPIO_read(Infr_front_3)*2 + GPIO_read(Infr_front_2)*4 + GPIO_read(Infr_front_1)*8;
+//       f4= GPIO_read(Infr_front_4);
+//       f3= GPIO_read(Infr_front_3);
+//       f2= GPIO_read(Infr_front_2);
+//       f1= GPIO_read(Infr_front_1);
+//       DEBUG_printf("%d,%d,%d,%d",f1,f2,f3,f4);
+
+        switch(readgpio_front)
+        {
+        case OFFSET_TO_LEFT:
+            speed[0]+=10;
+            speed[2]+=10;
+            speed[1]-=10;
+            speed[3]-=10;
+            break;
+        case OFFSET_TO_RIGHT:
+            speed[0]-=10;
+            speed[2]-=10;
+            speed[1]+=10;
+            speed[3]+=10;
+            break;
+        case MOVE_TO_LEFT:
+            speed[0]+=20;
+            speed[2]+=20;
+            speed[1]-=20;
+            speed[3]-=20;
+            break;
+        case MOVE_TO_RIGHT:
+            speed[0]-=20;
+            speed[2]-=20;
+            speed[1]+=20;
+            speed[3]+=20;
+            break;
+        case NO_OFFSET:
+            for (i=0;i<4;i++)
+            {
+                speed[i] = 700;
+            }
+            break;
+        }
+
+        for(i=0;i<4;i++)
+        {
+            motor_duty(i,speed[i]);
+        }
 
         usleep(time);
     }
 }
+
+
+
+
+

@@ -38,15 +38,15 @@ const GPIO21   = GPIO.addInstance();
 const GPIO22   = GPIO.addInstance();
 const GPIO23   = GPIO.addInstance();
 const GPIO24   = GPIO.addInstance();
+const GPIO25   = GPIO.addInstance();
+const GPIO26   = GPIO.addInstance();
+const GPIO27   = GPIO.addInstance();
+const GPIO28   = GPIO.addInstance();
 const GPIO29   = GPIO.addInstance();
 const GPIO30   = GPIO.addInstance();
 const GPIO31   = GPIO.addInstance();
 const GPIO32   = GPIO.addInstance();
 const GPIO33   = GPIO.addInstance();
-const GPIO34   = GPIO.addInstance();
-const GPIO35   = GPIO.addInstance();
-const GPIO36   = GPIO.addInstance();
-const GPIO37   = GPIO.addInstance();
 const I2C      = scripting.addModule("/ti/drivers/I2C", {}, false);
 const I2C1     = I2C.addInstance();
 const I2C2     = I2C.addInstance();
@@ -185,31 +185,31 @@ GPIO24.$name           = "CONFIG_TFT_CS";
 GPIO24.mode            = "Output";
 GPIO24.gpioPin.$assign = "boosterpack.11";
 
-GPIO29.$name           = "Infr_front1";
-GPIO29.gpioPin.$assign = "expansion.11";
+GPIO25.$name           = "Infr_back_5";
+GPIO25.gpioPin.$assign = "expansion.11";
 
-GPIO30.$name           = "Infr_front2";
-GPIO30.gpioPin.$assign = "expansion.13";
+GPIO26.$name           = "Infr_back_4";
+GPIO26.gpioPin.$assign = "expansion.13";
 
-GPIO31.$name           = "Infr_front3";
-GPIO31.gpioPin.$assign = "expansion.15";
+GPIO27.$name           = "Infr_back_3";
+GPIO27.gpioPin.$assign = "expansion.15";
 
-GPIO32.$name           = "Infr_front4";
-GPIO32.gpioPin.$assign = "expansion.14";
+GPIO28.$name           = "Infr_back_2";
+GPIO28.gpioPin.$assign = "expansion.14";
 
-GPIO33.$name           = "Infr_back1";
-GPIO33.gpioPin.$assign = "expansion.21";
+GPIO29.$name           = "Infr_back_1";
+GPIO29.gpioPin.$assign = "expansion.21";
 
-GPIO34.$name           = "Infr_back2";
-GPIO34.gpioPin.$assign = "expansion.23";
+GPIO30.$name           = "Infr_front_1";
+GPIO30.gpioPin.$assign = "expansion.23";
 
-GPIO35.$name           = "Infr_back3";
-GPIO35.gpioPin.$assign = "expansion.24";
+GPIO31.$name           = "Infr_front_2";
+GPIO31.gpioPin.$assign = "expansion.24";
 
-GPIO36.$name           = "Infr_back4";
-GPIO36.gpioPin.$assign = "expansion.27";
+GPIO32.$name           = "Infr_front_3";
+GPIO32.gpioPin.$assign = "expansion.27";
 
-GPIO37.$name = "Infr_back5";
+GPIO33.$name = "Infr_front_4";
 
 I2C1.$name              = "CONFIG_I2C_0";
 I2C1.i2c.sdaPin.$assign = "boosterpack.10";
@@ -308,7 +308,7 @@ Display1.uart.uart.rxPin.$suggestSolution    = "ball.6";
 ADC1.adc.$suggestSolution                    = "ADC14";
 ADC2.adc.$suggestSolution                    = "ADC14";
 ADC2.adc.adcPin.$suggestSolution             = "boosterpack.30";
-GPIO37.gpioPin.$suggestSolution              = "expansion.28";
+GPIO33.gpioPin.$suggestSolution              = "expansion.28";
 I2C1.i2c.$suggestSolution                    = "EUSCI_B1";
 I2C2.i2c.$suggestSolution                    = "EUSCI_B3";
 I2C2.i2c.sdaPin.$suggestSolution             = "expansion.29";
