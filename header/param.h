@@ -15,7 +15,7 @@
 
                                                        /*  PID controller params  */
 #define M3505_MOTOR_SPEED_PID_KP 1
-#define M3505_MOTOR_SPEED_PID_KI 0
+#define M3505_MOTOR_SPEED_PID_KI 0.005
 #define M3505_MOTOR_SPEED_PID_KD 0
 
 #define CHASSIS_FOLLOW_GIMBAL_PID_KP 1
@@ -26,15 +26,14 @@
 #define ANGLE_PID_MAX_OUT 1000
 #define ANGLEL_PID_MAX_IOUT 1000
 
-#define M3505_MOTOR_SPEED_PID_MAX_OUT 1000
-#define M3505_MOTOR_SPEED_PID_MAX_IOUT 1000
+#define M3505_MOTOR_SPEED_PID_MAX_OUT   2900
+#define M3505_MOTOR_SPEED_PID_MAX_IOUT  2500
 
 #define CHASSIS_ACCEL_X_NUM 1
 #define CHASSIS_ACCEL_Y_NUM 1
 
 #define CHASSIS_CONTROL_TIME 0.002f
 
-#define M3505_MOTOR_SPEED_PID_MAX_OUT 1000
 
 typedef struct
 {

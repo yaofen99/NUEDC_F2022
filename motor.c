@@ -14,6 +14,16 @@
 #include "ti_drivers_config.h"
 #include "motor.h"
 
+/* Driver Header files */
+#include <ti/drivers/PWM.h>
+#include <ti/drivers/GPIO.h>
+
+/* Driver configuration */
+#include "ti_drivers_config.h"
+#include "motor.h"
+
+#include "includes.h"
+
 /*00 停止 01正转 10 反转*/
 #define AIN_1(x)     GPIO_write(AIN1, x);
 #define AIN_2(x)     GPIO_write(AIN2, x);

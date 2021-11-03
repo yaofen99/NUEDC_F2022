@@ -95,6 +95,9 @@ extern int lua ;
 extern uint8_t gPixel[128];
 extern int lua ;
 
+extern pid_type_def *motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
+
+
 //
 //extern pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
 //extern pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid

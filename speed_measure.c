@@ -195,7 +195,7 @@ void *speed_measure_Thread(void *arg0)
     last_encoder[3] = encoder[3];
     last_time = time;
 
-    usleep(100);
+    usleep(200);
     }
 
 

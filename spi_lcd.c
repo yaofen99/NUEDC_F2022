@@ -990,7 +990,7 @@ void *lcd_Thread(void *arg0)
                 break;
         }
         Draw();//绘图函数
-        usleep(100000);
+        usleep(1000);
     }
     return (NULL);
 }

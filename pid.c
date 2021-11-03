@@ -86,6 +86,17 @@ fp32 PID_calc(pid_type_def *pid, fp32 ref, fp32 set)
     {
         return 0.0f;
     }
+    int id;
+
+    if(pid == motor_speed_pid[0])
+        id  = 1;
+    else if(pid == motor_speed_pid[1])
+        id  = 2;
+    else if(pid == motor_speed_pid[2])
+        id  = 3;
+    else if(pid == motor_speed_pid[3])
+        id  = 4;
+
 
     pid->error[2] = pid->error[1];
     pid->error[1] = pid->error[0];
@@ -115,6 +126,10 @@ fp32 PID_calc(pid_type_def *pid, fp32 ref, fp32 set)
         pid->out += pid->Pout + pid->Iout + pid->Dout;
         LimitMax(pid->out, pid->max_out);
     }
+
+    DEBUG_printf("motor %d:%f,%f,%f,%f\r\n",motor_speed_pid[id]->Iout,motor_speed_pid[id]->out,set,ref);
+
+
     return pid->out;
 }
 
