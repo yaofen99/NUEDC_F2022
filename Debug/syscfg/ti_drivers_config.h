@@ -88,14 +88,32 @@ extern "C" {
 #define DIN2                        22
 /* P3.6 */
 #define CONFIG_TFT_CS               23
+/* P6.2 */
+#define Infr_back_5                 24
+/* P7.3 */
+#define Infr_back_4                 25
+/* P7.1 */
+#define Infr_back_3                 26
+/* P6.3 */
+#define Infr_back_2                 27
+/* P8.0 */
+#define Infr_back_1                 28
+/* P7.4 */
+#define Infr_front_1                29
+/* P7.5 */
+#define Infr_front_2                30
+/* P10.0 */
+#define Infr_front_3                31
+/* P10.1 */
+#define Infr_front_4                32
 /* P1.1, LaunchPad Button S1 (Left) */
-#define CONFIG_GPIO_0               24
+#define CONFIG_GPIO_0               33
 /* P1.4, LaunchPad Button S2 (Right) */
-#define CONFIG_GPIO_1               25
+#define CONFIG_GPIO_1               34
 /* P1.0, LaunchPad LED 1 Red */
-#define CONFIG_LED_0_GPIO           26
+#define CONFIG_LED_0_GPIO           35
 /* P2.2, LaunchPad LED 2 Blue */
-#define CONFIG_LED_1_GPIO           27
+#define CONFIG_LED_1_GPIO           36
 
 /* LEDs are active high */
 #define CONFIG_GPIO_LED_ON  (1)

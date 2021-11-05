@@ -176,24 +176,6 @@ int main(void)
         while (1) {}
     }
 
-//    /*encoder_Thread config */
-//    pthread_attr_init(&attrs);
-//
-//    /* Set priority, detach state, and stack size attributes */
-//    priParam.sched_priority = 8;
-//    retc = pthread_attr_setschedparam(&attrs, &priParam);
-//    if (retc != 0) {
-//        /* failed to set attributes */
-//        while (1) {}
-//    }
-
-//    retc = pthread_create(&thread, &attrs, encoder_Thread, NULL);
-//    if (retc != 0) {
-//        /* pthread_create() failed */
-//        while (1) {}
-//    }
-//
-
     /*beep_Thread config */
     priParam.sched_priority = 8;
     retc = pthread_attr_setschedparam(&attrs, &priParam);
@@ -203,20 +185,6 @@ int main(void)
     }
     //@note temp close
     retc = pthread_create(&thread, &attrs, beep_pwm_Thread, NULL);
-    if (retc != 0) {
-        /* pthread_create() failed */
-        while (1) {}
-    }
-
-    /*beep_Thread config */
-    priParam.sched_priority = 9;
-    retc = pthread_attr_setschedparam(&attrs, &priParam);
-    if (retc != 0) {
-        /* failed to set priority */
-        while (1) {}
-    }
-
-    retc = pthread_create(&thread, &attrs, speed_control_Thread, NULL);
     if (retc != 0) {
         /* pthread_create() failed */
         while (1) {}

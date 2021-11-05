@@ -208,6 +208,24 @@ GPIO_PinConfig gpioPinConfigs[] = {
     GPIOMSP432_P5_3 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_HIGH,
     /* CONFIG_TFT_CS */
     GPIOMSP432_P3_6 | GPIO_CFG_OUT_STD | GPIO_CFG_OUT_STR_MED | GPIO_CFG_OUT_LOW,
+    /* Infr_back_5 */
+    GPIOMSP432_P6_2 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_back_4 */
+    GPIOMSP432_P7_3 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_back_3 */
+    GPIOMSP432_P7_1 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_back_2 */
+    GPIOMSP432_P6_3 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_back_1 */
+    GPIOMSP432_P8_0 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_front_1 */
+    GPIOMSP432_P7_4 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_front_2 */
+    GPIOMSP432_P7_5 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_front_3 */
+    GPIOMSP432_P10_0 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
+    /* Infr_front_4 */
+    GPIOMSP432_P10_1 | GPIO_CFG_IN_NOPULL | GPIO_CFG_IN_INT_NONE,
     /* CONFIG_GPIO_0 : LaunchPad Button S1 (Left) */
     GPIOMSP432_P1_1 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING,
     /* CONFIG_GPIO_1 : LaunchPad Button S2 (Right) */
@@ -275,6 +293,24 @@ GPIO_CallbackFxn gpioCallbackFunctions[] = {
     NULL,
     /* CONFIG_TFT_CS */
     NULL,
+    /* Infr_back_5 */
+    NULL,
+    /* Infr_back_4 */
+    NULL,
+    /* Infr_back_3 */
+    NULL,
+    /* Infr_back_2 */
+    NULL,
+    /* Infr_back_1 */
+    NULL,
+    /* Infr_front_1 */
+    NULL,
+    /* Infr_front_2 */
+    NULL,
+    /* Infr_front_3 */
+    NULL,
+    /* Infr_front_4 */
+    NULL,
     /* CONFIG_GPIO_0 : LaunchPad Button S1 (Left) */
     NULL,
     /* CONFIG_GPIO_1 : LaunchPad Button S2 (Right) */
@@ -291,8 +327,8 @@ GPIO_CallbackFxn gpioCallbackFunctions[] = {
 const GPIOMSP432_Config GPIOMSP432_config = {
     .pinConfigs = (GPIO_PinConfig *)gpioPinConfigs,
     .callbacks = (GPIO_CallbackFxn *)gpioCallbackFunctions,
-    .numberOfPinConfigs = 28,
-    .numberOfCallbacks = 28,
+    .numberOfPinConfigs = 37,
+    .numberOfCallbacks = 37,
     .intPriority = (~0)
 };
 

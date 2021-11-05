@@ -177,10 +177,9 @@ void *speed_measure_Thread(void *arg0)
     encoder[2] = get_encoder3();
     encoder[3] = get_encoder4();
 
-
     int i = 0;
     for (; i<4 ;i++){
-        speed_wheel[i] = (encoder[i] - last_encoder[i])*100/(float)(time - last_time);
+        speed_wheel[i] = (encoder[i] - last_encoder[i])*2496/(float)(time - last_time);
     }
 
 //    DEBUG_printf("%d,%d,%d,%f\n",encoder[0],last_encoder[0],encoder[0]-last_encoder[0],speed_wheel[0]);
@@ -195,7 +194,7 @@ void *speed_measure_Thread(void *arg0)
     last_encoder[3] = encoder[3];
     last_time = time;
 
-    usleep(100);
+    usleep(200);
     }
 
 

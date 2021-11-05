@@ -57,7 +57,11 @@
 #include "motor.h"
 
 
-
+#define OFFSET_TO_LEFT 0b0100
+#define OFFSET_TO_RIGHT 0b0010
+#define MOVE_TO_LEFT 0b1000
+#define MOVE_TO_RIGHT 0b0001
+#define NO_OFFSET 0
 
 
 #define FALSE 0U
@@ -95,6 +99,9 @@ extern int lua ;
 extern uint8_t gPixel[128];
 extern int lua ;
 
+extern pid_type_def *motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
+
+
 //
 //extern pid_type_def motor_speed_pid[4];             //motor speed PID.底盘电机速度pid
 //extern pid_type_def chassis_angle_pid;              //follow angle PID.底盘跟随角度pid
@@ -111,5 +118,7 @@ void Console_Print( const char *buffer);
 #define DEBUG_printf(format, ...)
 #define DEBUG(format, ...)
 #endif
+
+
 
 #endif /* INCLUDES_H_ */
